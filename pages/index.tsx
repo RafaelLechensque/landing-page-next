@@ -5,6 +5,7 @@ import IconInsta from "../public/icons/Instagram.svg";
 import EducaMais from "../public/image/educa-mais.jpg";
 import IconWhats from "../public/icons/WhatsApp.svg";
 import Seach from "../public/icons/Seach.svg";
+import ArrowLeft from "../public/icons/arrow-right.svg";
 import Blow from "../public/image/blow.png";
 import Link from "next/link";
 
@@ -16,6 +17,7 @@ export default function Home() {
       max-md:h-24
       max-sm:h-12 ">
         <Image src={Logo} alt="" className="max-md:size-auto" />
+        {/* <Image src="" width={1220} height={420} alt="" className="max-md:size-auto"  /> */}
         <div className="
         flex flex-row w-32 justify-between m-10 self-center 
         max-md:w-28 max-md:size-10 
@@ -43,7 +45,7 @@ export default function Home() {
             max-md:text-base max-md:mb-1
             max-sm:text-xs
             ">Faca a matricula em um curso e ganhe outro*</h3>
-              <button className="w-full p-6 rounded-2xl bg-[#5717a8] border-b-4 border-r-8 border-b-[#f39a2e]  border-r-[#f39a2e] text-3xl
+              <button className="w-full p-6 rounded-2xl bg-[#5717a8] shadow-[5px_5px_0px_0px_rgba(243,154,46)] text-3xl
             max-md:text-lg max-md:p-0 max-md:border-r-2 max-md:w-2/3 max-md:rounded-lg
             max-sm:text-sm max-sm:border-b-2 max-sm:
             ">
@@ -69,30 +71,45 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section className="my-16 ">
-          <div className="
-            flex justify-center
-            h-20 w-full  mx-24
-            rounded-3xl
-            bg-white
-            text-2xl
-            font-bold
-            text-[#7f3c8a]
-            placeholder:text-[#7f3c8a]
-          ">
+        <section className="my-16 ">
 
-            <input type="search" placeholder="Busque um Curso" className="
-             w-full  text-2xl
-            font-bold
-            text-[#7f3c8a]
-            placeholder:text-[#7f3c8a] 
-            
+          <div className="flex bg-white mx-28 my-20 rounded-[30px] justify-between px-2 shadow-[10px_10px_0px_0px_rgba(243,154,46)]">
+            <input type="text" name="" id="" placeholder="Busque Um curso "
+              className=" 
+              flex-1 text-4xl rounded-[30px] p-4
+              text-[#5717a8] placeholder:text-[#5717a8]
             " />
-            <button className="border-red-600 border-solid border-2 ">
-              <Image src={Seach} alt="" />
+            <button>
+              <Image src={Seach} width={50} alt="" />
             </button>
           </div>
-        </section> */}
+
+          <div className="
+            flex justify-evenly
+            bg-[#5717a8]
+            p-4
+            items-center
+          ">
+            
+            <Link href="/" className="  w-52 flex-col text-center  ">
+              <Image alt="" src={EducaMais} className="object-cover rounded-2xl h-56 border-[#f39d39] border-solid border-8 flex-1" />
+              <h2 className="font-extrabold text-white text-2xl">Robotica</h2>
+            </Link>
+            <Link href="/" className="  w-52 flex-col text-center  ">
+              <Image alt="" src={EducaMais} className="object-cover rounded-2xl h-56 border-[#f39d39] border-solid border-8 flex-1" />
+              <h2 className="font-extrabold text-white text-2xl">Robotica</h2>
+            </Link>
+            <Link href="/" className="  w-52 flex-col text-center  ">
+              <Image alt="" src={EducaMais} className="object-cover rounded-2xl h-56 border-[#f39d39] border-solid border-8 flex-1" />
+              <h2 className="font-extrabold text-white text-2xl">Robotica</h2>
+            </Link>
+            <Link href="/" className="  w-52 flex-col text-center  ">
+              <Image alt="" src={EducaMais} className="object-cover rounded-2xl h-56 border-[#f39d39] border-solid border-8 flex-1" />
+              <h2 className="font-extrabold text-white text-2xl">Robotica</h2>
+            </Link>
+            <button className="text-9xl text-white font-semibold"><Image src={ArrowLeft} alt=""/></button>
+          </div>
+        </section>
       </main>
     </>
   );
