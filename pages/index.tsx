@@ -1,115 +1,99 @@
 import Image from "next/image";
-import localFont from "next/font/local";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Cover from "../public/image/Cover-exemplo.png";
+import Logo from "../public/image/Logo.png";
+import IconInsta from "../public/icons/Instagram.svg";
+import EducaMais from "../public/image/educa-mais.jpg";
+import IconWhats from "../public/icons/WhatsApp.svg";
+import Seach from "../public/icons/Seach.svg";
+import Blow from "../public/image/blow.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <nav className="
+      bg-[#7f3c8a]  flex flex-row justify-between 
+      max-md:h-24
+      max-sm:h-12 ">
+        <Image src={Logo} alt="" className="max-md:size-auto" />
+        <div className="
+        flex flex-row w-32 justify-between m-10 self-center 
+        max-md:w-28 max-md:size-10 
+        max-sm:w-20  max-sm:size-8 max-sm:m-2">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <Link href="">
+            <Image src={IconWhats} alt="" className="" />
+          </Link>
+          <Link href="">
+            <Image src={IconInsta} alt="" className="" />
+          </Link>
         </div>
+
+        {/* <Image src={Wave} alt="" className="relative top-0 w-[]" /> */}
+      </nav>
+      <main className="overflow-hidden">
+        <section className="bg-[#f7a528] flex ">
+          <div className="relative">
+            <div className="absolute right-[10%] top-1/4 w-80 text-white font-extrabold flex flex-col items-center
+          max-md:w-52
+          max-sm:right-1 max-sm:w-40
+          ">
+              <h3 className="
+            text-2xl text-center mb-4
+            max-md:text-base max-md:mb-1
+            max-sm:text-xs
+            ">Faca a matricula em um curso e ganhe outro*</h3>
+              <button className="w-full p-6 rounded-2xl bg-[#5717a8] border-b-4 border-r-8 border-b-[#f39a2e]  border-r-[#f39a2e] text-3xl
+            max-md:text-lg max-md:p-0 max-md:border-r-2 max-md:w-2/3 max-md:rounded-lg
+            max-sm:text-sm max-sm:border-b-2 max-sm:
+            ">
+                Inscreva-se</button>
+            </div>
+            <Image src={Cover} width={1440} alt="" />
+          </div>
+        </section>
+        <section className="flex flex-row">
+          <div className="bg-[#7f3c8a] size-96 rounded-xl -bottom-72 -left-3 relative">
+            <h2 className="relative left-10 top-3 text-3xl font-extrabold text-white">Parcerias</h2>
+            <Image src={EducaMais} alt="" className="absolute left-14 top-14 size-96 rounded-xl" />
+          </div>
+          <div className="relative right-[-15%]">
+
+            <h3 className="
+             text-right
+             
+            absolute top-64 w-1/2 right-48 text-white text-3xl 
+            "
+            >Utilizamos a metodologia Maker, que valoriza o aprendizado prático por meio da criação e experimentação. Isso estimula a criatividade, colaboração e inovação</h3>
+            <Image src={Blow} alt="" />
+          </div>
+        </section>
+
+        {/* <section className="my-16 ">
+          <div className="
+            flex justify-center
+            h-20 w-full  mx-24
+            rounded-3xl
+            bg-white
+            text-2xl
+            font-bold
+            text-[#7f3c8a]
+            placeholder:text-[#7f3c8a]
+          ">
+
+            <input type="search" placeholder="Busque um Curso" className="
+             w-full  text-2xl
+            font-bold
+            text-[#7f3c8a]
+            placeholder:text-[#7f3c8a] 
+            
+            " />
+            <button className="border-red-600 border-solid border-2 ">
+              <Image src={Seach} alt="" />
+            </button>
+          </div>
+        </section> */}
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
